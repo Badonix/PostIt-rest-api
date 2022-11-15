@@ -1,12 +1,12 @@
 const express = require("express");
-const PORT = 5000;
+
 const app = express();
 const cors = require("cors");
 const Post = require("./postModel");
 require("dotenv").config();
 const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-
+const PORT = process.env.PORT;
 var jsonParser = bodyParser.json();
 app.use(cors());
 console.log(process.env.DB_ADMIN);
